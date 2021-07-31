@@ -60,13 +60,13 @@ function FriendList() {
         setFriendList(newData)
     }
 
-    const addFav = (e, index) => {
+    window.friendsList = friendsList
 
-        let fav = friendsList[index];
+    const addFav = (e, id) => {
+
+        let fav = friendsList.length && friendsList.find(a => a.id === id);
         fav.isFav = true;
-        let newData = friendsList.filter(item => {
-            return friendsList[index] != item
-        });
+        let newData = friendsList.filter(item => item.id !== id);
         newData.unshift(fav);
         selectPage(0)
         setFriendList(newData);
