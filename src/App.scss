@@ -1,0 +1,119 @@
+$background: #dddddd;
+$accent: #e54065;
+$border: #cfd2dc;
+$text: #0c0c0c;
+$filter_btn: #dddddd;
+$read_backgeround: #f2f2f2;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.friendsList_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .pagination-buttons {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+    li {
+      background: none;
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      &.page-btn {
+        background-color: $filter_btn;
+        color: $text;
+        height: 35px;
+        border-radius: 2px;
+        padding: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transition: $background 0.3s ease;
+        &.active {
+          background-color: #717790;
+          color: white;
+        }
+      }
+      &.start-page {
+        background-color: #ccc;
+        font-weight: bold;
+        font-size: 0.6em;
+      }
+    }
+  }
+
+  .main_container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .friend_list {
+      max-width: 400px;
+      width: 100%;
+      //   background: $background;
+      border: 1px $filter_btn solid;
+      ul {
+        list-style: none;
+        li {
+          padding: 15px;
+          background-color: white;
+          border: 1px solid $filter_btn;
+          //   margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          > span {
+            flex-direction: column;
+            display: flex;
+            font-weight: 500;
+            > span {
+              font-size: 13px;
+              margin-top: 5px;
+              font-weight: normal;
+            }
+            &:first-child {
+              width: 80%;
+            }
+            &.buttons {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              img {
+                height: 20px;
+                margin-left: 15px;
+                &:first-child {
+                  margin-left: 0px;
+                }
+              }
+            }
+          }
+        }
+      }
+      h3 {
+        padding: 15px;
+        background: $filter_btn;
+        color: $text;
+      }
+      input {
+        width: 100%;
+        padding: 8px 15px;
+        border: none;
+        border-bottom: 1px $filter_btn solid;
+        outline: none;
+        &:focus {
+          border: 1px solid $text;
+        }
+      }
+    }
+  }
+}
