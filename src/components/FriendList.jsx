@@ -3,31 +3,13 @@ import '../App.scss';
 import Fav from "../favourite.png";
 import NoFav from "../star.png";
 import Del from "../bin.png";
-import ReactPaginate from 'react-paginate';
 import {Paginate} from '../pagination';
 
 function FriendList() {
 
     const [searchFriends, setSearchFriends] = useState("")
     const [filterDataMain, setFilterData] = useState([])
-    const [friendsList, setFriendList] = useState([
-        // {
-        //     name: "Karan",
-        //     isFav: false
-        // },
-        // {
-        //     name: "Vatan",
-        //     isFav: false
-        // },
-        // {
-        //     name: "Preet",
-        //     isFav: false
-        // },
-        // {
-        //     name: "Gagan",
-        //     isFav: false
-        // }
-    ])
+    const [friendsList, setFriendList] = useState([])
 
     const [selectedPage, selectPage] = useState(0)
 
